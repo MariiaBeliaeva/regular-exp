@@ -3,7 +3,9 @@
 
 // Определи, есть ли во входной строке номер СНИЛС.
 function hasSNILS(string) {
-  let regexp = /(\d\d\d).(\d\d\d).(\d\d\d).(\d\d)/g;
+  //   let regexp = /(\d\d\d).(\d\d\d).(\d\d\d).(\d\d)/g;
+  //   return regexp.test(string);
+  let regexp = /(\d{3}).(\d{3}).(\d{3}).(\d{2})/g;
   return regexp.test(string);
 }
 
