@@ -16,7 +16,10 @@ function grabSNILS(string) {
 }
 
 // Найди и верни все номера СНИЛС, что есть в строке.
-function grabAllSNILS(string) {}
+function grabAllSNILS(string) {
+  let regexp = /\d{3}-\d{3}-\d{3}\s\d{2}/g;
+  return string.match(regexp);
+}
 
 //console.log(grabAllSNILS("The numbers are 350-802-074 94, 234-600-142 22, and 013-605-876 94"))
 
