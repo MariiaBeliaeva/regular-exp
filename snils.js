@@ -5,12 +5,15 @@
 function hasSNILS(string) {
   //   let regexp = /(\d\d\d).(\d\d\d).(\d\d\d).(\d\d)/g;
   //   return regexp.test(string);
-  let regexp = /(\d{3}).(\d{3}).(\d{3}).(\d{2})/g;
+  let regexp = /\d{3}.\d{3}.\d{3}.\d{2}/g;
   return regexp.test(string);
 }
 
 // Найди и верни номер СНИЛС из строки.
-function grabSNILS(string) {}
+function grabSNILS(string) {
+  let regexp = /\d{3}-\d{3}-\d{3}\s\d{2}/;
+  return string.match(regexp).join("");
+}
 
 // Найди и верни все номера СНИЛС, что есть в строке.
 function grabAllSNILS(string) {}
